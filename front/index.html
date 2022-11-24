@@ -1,0 +1,53 @@
+<!doctype html>
+<html>
+  <head>
+    
+    <title>Big Data Processing Tool</title>
+  </head>
+  <body>
+    <h3><center>Welcome to the Big Data Processing Toolbox</center></h3>
+    <p><center>Please choose the application to run</center></p>
+    <center>
+      <form action="http://localhost:9870" target="_blank">
+        <input type="submit" value="Apache Hadoop"/>
+    </form>
+    <br>
+    <form action="http://localhost:8080" target="_blank">
+        <input type="submit" value="Apache Spark"/>
+    </form>
+    
+    <br>
+
+    <form action="http://localhost:8888" target="_blank">
+        <input type="submit" value="Jupyter Notebook"/>
+    </form>
+
+    <br>
+
+    <form action="http://localhost:9000/" target="_blank">
+        <input type="submit" value="SonarQube and SonarScanner" onclick='fetch("http://localhost:9000/api/authentication/login", {
+          "headers": {
+            "accept": "application/json",
+            "accept-language": "en-US,en;q=0.9",
+            "content-type": "application/x-www-form-urlencoded",
+            "sec-ch-ua": "\"Google Chrome\";v=\"107\", \"Chromium\";v=\"107\", \"Not=A?Brand\";v=\"24\"",
+            "sec-ch-ua-mobile": "?0",
+            "sec-ch-ua-platform": "\"macOS\"",
+            "sec-fetch-dest": "empty",
+            "sec-fetch-mode": "cors",
+            "sec-fetch-site": "same-origin"
+          },
+          "referrer": "http://localhost:9000/sessions/new?return_to=%2F",
+          "referrerPolicy": "strict-origin-when-cross-origin",
+          "body": "login=admin&password=hihi",
+          "method": "POST",
+          "mode": "cors",
+          "credentials": "omit"
+        });'/>
+        
+    </form>
+  </center>
+  </body>
+</html>
+
+

@@ -1,0 +1,13 @@
+sonar-scanner \
+  -Dsonar.projectKey=hello \
+  -Dsonar.sources=. \
+  -Dsonar.host.url=http://localhost:9000 \
+  -Dsonar.login=squ_d66fbb6b067b4783134df549345805272e5ab7e1
+
+
+docker run --rm --link sonarqube \
+-e SONAR_HOST_URL="http://sonarqube:9000" \
+-e SONAR_LOGIN="squ_d66fbb6b067b4783134df549345805272e5ab7e1" \
+-v "/home/user/hello:/usr/src" \
+--platform linux/amd64 \
+sonarsource/sonar-scanner-cli
